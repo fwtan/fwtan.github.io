@@ -1,11 +1,11 @@
 :root {
   color-scheme: light;
-  --bg: #fffdf8;
-  --ink: #202124;
-  --muted: #68645d;
-  --line: #ded8cc;
-  --soft: #f5f1e9;
-  --link: #0b6670;
+  --bg: #ffffff;
+  --ink: #222222;
+  --muted: #626970;
+  --line: #e5e7eb;
+  --soft: #ffffff;
+  --link: #1d5da6;
   --award: #8b3f2f;
 }
 
@@ -70,11 +70,20 @@ h1 {
   margin-bottom: 18px;
 }
 
-.lead {
+.lead,
+.hero-secondary {
   color: var(--ink);
   font-size: 17px;
+  line-height: 1.6;
+  max-width: 760px;
+}
+
+.lead {
   margin-bottom: 18px;
-  max-width: 680px;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
 
 .hero-actions,
@@ -213,5 +222,43 @@ h3 a:hover {
 
   .thesis-card {
     grid-template-columns: 1fr;
+  }
+}
+
+/* Additional profile and experience sections */
+.hero-secondary {
+  margin-top: 1rem;
+}
+
+.experience-entry {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1.25rem;
+  padding: 0.65rem 0;
+}
+
+.experience-entry + .experience-entry {
+  border-top: 1px solid var(--line);
+}
+
+.experience-entry p {
+  margin: 0.2rem 0 0;
+}
+
+.experience-date {
+  white-space: nowrap;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+@media (max-width: 560px) {
+  .experience-entry {
+    display: block;
+  }
+
+  .experience-date {
+    display: block;
+    margin-top: 0.3rem;
   }
 }
